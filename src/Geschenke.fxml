@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <BorderPane prefHeight="152.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <left>
+            <ImageView fitHeight="74.0" fitWidth="106.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@wunschliste/WunschlisteLogo.PNG" />
+               </image>
+            </ImageView>
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <StackPane prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="62.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@wunschliste/User.PNG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </StackPane>
+                  <ComboBox prefWidth="150.0" />
+               </children>
+            </VBox>
+         </right>
+         <bottom>
+            <VBox prefHeight="78.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Separator prefWidth="200.0" />
+                  <StackPane prefHeight="84.0" prefWidth="800.0">
+                     <children>
+                        <Label text="Geschenke">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </StackPane>
+                  <Separator prefWidth="200.0" />
+               </children>
+            </VBox>
+         </bottom>
+         <center>
+            <GridPane BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="287.3333435058594" minWidth="10.0" prefWidth="187.33334350585938" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="368.6666564941406" minWidth="10.0" prefWidth="215.6666259765625" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.33331298828125" minWidth="10.0" prefWidth="187.3333740234375" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Button mnemonicParsing="false" text="Dashboard" />
+                        <Button mnemonicParsing="false" text="Ereignisse" />
+                        <Button mnemonicParsing="false" text="Geschenke" />
+                     </children>
+                  </HBox>
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </top>
+   <center>
+      <SplitPane dividerPositions="0.5" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="645.0" prefWidth="398.0">
+                     <children>
+                        <StackPane prefHeight="43.0" prefWidth="296.0">
+                           <children>
+                              <Label text="Eigene Wunschliste" />
+                           </children>
+                        </StackPane>
+                        <TableView prefHeight="602.0" prefWidth="449.0">
+                          <columns>
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="99.0" resizable="false" text="Bezeichnung" />
+                              <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="99.0" resizable="false" text="Beschreibung" />
+                            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="99.0" resizable="false" text="Kommentar" />
+                            <TableColumn maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="99.0" resizable="false" text="Priorität" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <VBox prefHeight="644.0" prefWidth="397.0">
+                     <children>
+                        <StackPane prefHeight="66.0" prefWidth="496.0">
+                           <children>
+                              <Label text="Geschenke zum Besorgen" />
+                           </children>
+                        </StackPane>
+                        <TableView prefHeight="625.0" prefWidth="496.0">
+                          <columns>
+                              <TableColumn minWidth="99.0" prefWidth="-1.0" text="Bezeichnung" />
+                            <TableColumn minWidth="99.0" prefWidth="-1.0" text="Von" />
+                            <TableColumn minWidth="99.0" prefWidth="-1.0" text="Datum" />
+                              <TableColumn minWidth="99.0" prefWidth="-1.0" text="Besorgt?" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
